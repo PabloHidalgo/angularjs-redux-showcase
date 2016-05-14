@@ -1,5 +1,5 @@
-const READ = 'angular-redux-showcase/emails/READ';
-const DELETE = 'angular-redux-showcase/emails/DELETE';
+const READ = 'angularjs-redux-showcase/emails/READ';
+const DELETE = 'angularjs-redux-showcase/emails/DELETE';
 
 export const INITIAL_STATE = [
   {

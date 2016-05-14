@@ -1,6 +1,6 @@
-const ADD = 'angular-redux-showcase/contacts/ADD';
-const UPDATE = 'angular-redux-showcase/contacts/UPDATE';
-const DELETE = 'angular-redux-showcase/contacts/DELETE';
+const ADD = 'angularjs-redux-showcase/contacts/ADD';
+const UPDATE = 'angularjs-redux-showcase/contacts/UPDATE';
+const DELETE = 'angularjs-redux-showcase/contacts/DELETE';
 
 export const INITIAL_STATE = [];
 
