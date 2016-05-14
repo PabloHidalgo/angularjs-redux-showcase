@@ -1,6 +1,5 @@
+import * as actions from '../actions/action-types.js';
 import { contacts } from './contacts.reducer';
-
-import { ADD_CONTACT, UPDATE_CONTACT, DELETE_CONTACT } from './../actions/contacts.actions';
 import { INITIAL_STATE } from './contacts.reducer';
 
 describe('contacts reducer', () => {
@@ -22,7 +21,7 @@ describe('contacts reducer', () => {
 
   it('should add a contact', () => {
     const addedEvent = {
-      type: ADD_CONTACT,
+      type: actions.ADD_CONTACT,
       payload: {
         name: 'sut contact',
         email: 'sutact.contact@karma.runner.com'
@@ -40,7 +39,7 @@ describe('contacts reducer', () => {
     ];
 
     const updatedEvent = {
-      type: UPDATE_CONTACT,
+      type: actions.UPDATE_CONTACT,
       payload: {
         id: 999,
         name: 'updated sut contact',
@@ -61,7 +60,7 @@ describe('contacts reducer', () => {
     ];
 
     const deletedEvent = {
-      type: DELETE_CONTACT,
+      type: actions.DELETE_CONTACT,
       payload: {
         id: 999
       }

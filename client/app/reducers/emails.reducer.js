@@ -1,4 +1,4 @@
-import {READ_EMAIL, DELETE_EMAIL} from '../actions/emails.actions.js';
+import * as actions from '../actions/action-types.js';
 
 //CHECK duck container
 //https://github.com/goopscoop/ga-react-tutorial/blob/6-reduxActionsAndReducers/src/redux/modules/toDoApp.js
@@ -36,9 +36,9 @@ export const INITIAL_STATE = [
 
 export function emails(state = INITIAL_STATE, {type, payload}) {
   switch (type) {
-    case READ_EMAIL:
+    case actions.READ_EMAIL:
       return _reduceRead(state, payload.emailId);
-    case DELETE_EMAIL:
+    case actions.DELETE_EMAIL:
       return _reduceDelete(state, payload.emailId);
     default:
       return state;

@@ -1,0 +1,6 @@
+export const ADD_CONTACT = 'ADD_CONTACT';
+export const UPDATE_CONTACT = 'UPDATE_CONTACT';
+export const DELETE_CONTACT = 'DELETE_CONTACT';
+
+export const READ_EMAIL = 'READ_EMAIL';
+export const DELETE_EMAIL = 'DELETE_EMAIL';

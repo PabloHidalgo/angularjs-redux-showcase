@@ -1,9 +1,8 @@
-export const READ_EMAIL = 'READ_EMAIL';
-export const DELETE_EMAIL = 'DELETE_EMAIL';
+import * as action from './action-types.js';
 
 export function readEmail(emailId) {
   return {
-    type: READ_EMAIL,
+    type: action.READ_EMAIL,
     payload: {
       emailId: parseInt(emailId, 10)
     }
@@ -12,7 +11,7 @@ export function readEmail(emailId) {
 
 export function deleteEmail(emailId) {
   return {
-    type: DELETE_EMAIL,
+    type: action.DELETE_EMAIL,
     payload: {
       emailId: parseInt(emailId, 10)
     }

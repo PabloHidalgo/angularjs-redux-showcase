@@ -1,4 +1,4 @@
-import { ADD_CONTACT, UPDATE_CONTACT, DELETE_CONTACT } from '../actions/contacts.actions.js';
+import * as actions from '../actions/action-types.js';
 
 /**
 data structure
@@ -15,11 +15,11 @@ export const INITIAL_STATE = [];
 
 export function contacts(state = INITIAL_STATE, {type, payload}) {
   switch (type) {
-    case ADD_CONTACT:
+    case actions.ADD_CONTACT:
       return _reduceAdd(state, payload);
-    case UPDATE_CONTACT:
+    case actions.UPDATE_CONTACT:
       return _reduceUpdate(state, payload);
-    case DELETE_CONTACT:
+    case actions.DELETE_CONTACT:
       return _reduceDelete(state, payload);
     default:
       return state;

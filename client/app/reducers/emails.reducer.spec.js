@@ -1,6 +1,5 @@
+import * as actions from '../actions/action-types.js';
 import { emails } from './emails.reducer';
-
-import { READ_EMAIL, DELETE_EMAIL } from './../actions/emails.actions';
 import { INITIAL_STATE } from './emails.reducer';
 
 describe('emails reducer', () => {
@@ -16,7 +15,7 @@ describe('emails reducer', () => {
 
   it('should mark an email as readed', () => {
     const readedEvent = {
-      type: READ_EMAIL,
+      type: actions.READ_EMAIL,
       payload: {
         emailId: 1,
       }
@@ -28,7 +27,7 @@ describe('emails reducer', () => {
 
   it('should delete an email', () => {
     const deletedEvent = {
-      type: DELETE_EMAIL,
+      type: actions.DELETE_EMAIL,
       payload: {
         emailId: 1,
       }
