@@ -1,4 +1,4 @@
-import {readEmail, deleteEmail} from '../ducks/emails';
+import emailActions from '../actions/emails.actions';
 
 let template = `
   <h1>MAILBOX</h1>
@@ -18,13 +18,7 @@ let controller = class MailboxController {
   constructor($ngRedux, $scope) {
     'ngInject';
 
-    // let actions = Object.assign({}, {readEmail, deleteEmail}),
-    //     disconnect = $ngRedux.connect(this.mapStateToThis, actions)(this);
-
-    //taken from:
-    //https://github.com/goopscoop/ga-react-tutorial/blob/6-reduxActionsAndReducers/src/containers/toDoAppContainer.js
-
-    let disconnect = $ngRedux.connect(this.mapStateToThis, this.mapDispatchToTarget)(this);
+    let disconnect = $ngRedux.connect(this.mapStateToThis, emailActions)(this);
     $scope.$on('$destroy', () => disconnect());
   }
 
@@ -32,13 +26,6 @@ let controller = class MailboxController {
     return {
       emails: state.emails
     };
-  }
-
-  mapDispatchToTarget(dispatch) {
-    return {
-      readEmail: (id) => dispatch(readEmail(id)),
-      deleteEmail: (id) => dispatch(deleteEmail(id))
-    }
   }
 };
 
