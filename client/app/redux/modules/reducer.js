@@ -3,7 +3,7 @@ import * as redux from 'redux';
 import emails from './emails';
 import contacts from './contacts';
 
-export const ducks = redux.combineReducers({
+export const rootReducer = redux.combineReducers({
   emails,
   contacts
 });

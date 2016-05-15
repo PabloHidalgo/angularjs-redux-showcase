@@ -17,7 +17,8 @@
     "lodash": "^3.8.0",
     "ng-redux": "^3.3.3",
     "normalize.css": "^3.0.3",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "reselect": "^2.5.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
